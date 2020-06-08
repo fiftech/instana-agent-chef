@@ -181,7 +181,9 @@ com.instana.plugin.generic.hardware:
 #      password: ''
 
 ## Java Profiling
+<% if @profile_enabled %>
 com.instana.plugin.profiling.java:
   enabled: true
   cpu-sampler-enabled: true
   contention-sampler-enabled: true
+<% end %>
