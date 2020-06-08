@@ -14,7 +14,6 @@ template "#{node['instana']['agent']['config_dir']}/configuration.yaml" do
 	group 'root'
 	variables(
 		zone: node['instana']['agent']['zone'],
-		tags: node['instana']['agent']['tags'],
-		profile_enabled: node['instana']['agent']['monitor']['profile']['enabled']
+		tags: node['instana']['agent']['tags']
 	)
 end
