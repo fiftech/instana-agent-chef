@@ -110,3 +110,8 @@ node.default['instana']['agent']['limit']['memory']['maxsize'] = 512 # (MB)
 
 # Default agent config directory, added here for transition at a later date do not change this value
 node.default['instana']['agent']['config_dir'] = '/opt/instana/agent/etc/instana'
+
+# Configure Profiling, enables you to continuously analyze code-level performance in production without negatively impacting production applications
+node.default['instana']['agent']['config']['com.instana.plugin.profiling.java']['enabled'] = true
+node.default['instana']['agent']['config']['com.instana.plugin.profiling.java']['cpu-sampler-enabled'] = true
+node.default['instana']['agent']['config']['com.instana.plugin.profiling.java']['contention-sampler-enabled'] = true

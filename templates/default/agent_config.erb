@@ -179,3 +179,11 @@ com.instana.plugin.generic.hardware:
 #    DATABASE_NAME_2:
 #      user: '' #default is 'SYSTEM'
 #      password: ''
+
+## Java Profiling
+<% if node['instana']['agent']['config']['com.instana.plugin.profiling.java']['enabled'] %>
+com.instana.plugin.profiling.java:
+  enabled: <%= node['instana']['agent']['config']['com.instana.plugin.profiling.java']['enabled'] %>
+  cpu-sampler-enabled: <%= node['instana']['agent']['config']['com.instana.plugin.profiling.java']['cpu-sampler-enabled'] %>
+  contention-sampler-enabled: <%= node['instana']['agent']['config']['com.instana.plugin.profiling.java']['contention-sampler-enabled'] %>
+<% end %>
