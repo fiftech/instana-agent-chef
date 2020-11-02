@@ -51,7 +51,7 @@ end
 
 package 'instana-agent' do
   package_name "instana-agent-#{node['instana']['agent']['flavor']}"
-  action :upgrade
+  action :install
 end
 
 directory systemd_srv_dir do
