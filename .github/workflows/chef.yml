@@ -1,0 +1,18 @@
+name: Chef
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  dokken:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code
+      uses: actions/checkout@master
+    - name: Install Chef
+      uses: actionshub/chef-install@master
+    - name: Linting
+      run: cookstyle -f simple || (echo "Run 'cookstyle -a' to correct cookstyle errors." && exit 1)
