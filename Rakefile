@@ -6,4 +6,4 @@ FoodCritic::Rake::LintTask.new
 RSpec::Core::RakeTask.new(:rspec)
 Stove::RakeTask.new(:deploy)
 
-task default: %i[foodcritic]
+task default: %i(foodcritic)
